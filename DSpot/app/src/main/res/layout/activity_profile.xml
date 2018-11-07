@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/special_grey"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/edit_profile"
+                    android:onClick="openAccountSettingsActivity" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    app:cardBackgroundColor="@color/transparent"
+                    app:cardCornerRadius="65dp">
+
+                    <ImageView
+                        android:id="@+id/profilePhotoImageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/ic_account_circle_white_24dp_96" />
+
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/nameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/cityCountryTextView"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/gray_cat"
+                    android:maxLines="3"
+                    android:text="FName LName"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    app:layout_constraintTop_toBottomOf="@+id/roundFrameImage"
+                    tools:layout_editor_absoluteX="8dp" />
+
+                <TextView
+                    android:id="@+id/cityCountryTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/gray_cat"
+                    android:maxLines="3"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="30dp"
+                    android:paddingStart="30dp"
+                    android:text="City, Country"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@+id/roundFrameImage"
+                    tools:layout_editor_absoluteX="8dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/special_grey_2"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+
+                    <Button
+                        android:id="@+id/button11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:background="@color/light_grey"
+                        android:fontFamily="@font/gray_cat"
+                        android:text="$Topup"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="18sp"
+                        android:visibility="visible"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                    <Button
+                        android:id="@+id/button8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/light_grey"
+                        android:fontFamily="@font/gray_cat"
+                        android:text="$Tickets"
+                        android:textColor="@color/cardview_light_background"
+                        android:textSize="18sp"
+                        android:visibility="visible"
+                        app:layout_constraintRight_toRightOf="parent"
+                        tools:layout_editor_absoluteY="0dp" />
+
+                </android.support.constraint.ConstraintLayout>-->
+            </LinearLayout>
+
+            <GridLayout
+                android:id="@+id/featuredArtistsGridLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:alignmentMode="alignBounds"
+                android:columnCount="2">
+
+                <Button
+                    android:id="@+id/imageView6"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/gray_cat"
+                    android:layout_rowWeight="1"
+                    android:layout_weight="1"
+                    android:background="@color/special_grey"
+                    android:text="Following"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/imageView4"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:fontFamily="@font/gray_cat"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_rowWeight="1"
+                    android:layout_weight="1"
+                    android:background="@color/special_grey"
+                    android:text="Upcoming"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/imageView9"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/gray_cat"
+                    android:layout_marginTop="10dp"
+                    android:layout_rowWeight="1"
+                    android:layout_weight="1"
+                    android:background="@color/special_grey"
+                    android:text="Tickets"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/imageView12"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_rowWeight="1"
+                    android:fontFamily="@font/gray_cat"
+                    android:layout_weight="1"
+                    android:background="@color/special_grey"
+                    android:text="History"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="18sp" />
+
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

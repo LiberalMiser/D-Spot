@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- opens a subscreen of settings -->
+    <PreferenceCategory android:title="Notifications">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="switch_preference_1"
+            android:summary="Vibration is enabled"
+            android:title="Vibration"/>
+        <RingtonePreference
+            android:defaultValue=""
+            android:key="ringtone_preference_1"
+            android:title="Notification Tone"
+            android:summary="No tone selected"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Display">
+
+        <!--<SwitchPreference
+            android:defaultValue="true"
+            android:key="theme"
+            android:summary="Dark Theme enabled"
+            android:title="Dark Theme" />-->
+        <ListPreference
+            android:defaultValue="Red"
+            android:entries="@array/CountryList"
+            android:entryValues="@array/CountryList"
+            android:key="theme_01"
+            android:title="Selected Theme" />
+    </PreferenceCategory>
+    <!--<PreferenceCategory android:title="Data Synchronization">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="switch_preference_1"
+            android:summary="Caching images allows for faster loading time but will require the use of storage space "
+            android:title="Cache Images" />
+    </PreferenceCategory>-->
+</PreferenceScreen>

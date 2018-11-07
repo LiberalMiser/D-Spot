@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:button="@android:color/transparent"
+        android:paddingStart="20dp"
+        android:text="@string/prefs_text_placeholder" />
+
+</android.support.constraint.ConstraintLayout>

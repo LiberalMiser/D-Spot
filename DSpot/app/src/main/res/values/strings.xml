@@ -1,0 +1,77 @@
+<resources>
+    <!--Local App Titles-->
+    <string name="app_name">D-Spot</string>
+    <string name="home_title">Home</string>
+    <string name="categories_title">Categories</string>
+    <string name="destination_list_title">Destination List</string>
+    <string name="log_in_title">Log In</string>
+    <string name="sign_up_title">Sign Up</string>
+    <string name="saved_destinations_title">Saved Destinations</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!--Firebase Nodes-->
+    <string name="users_node">Users/</string>
+    <string name="users_selected_categories">User Selected Categories/</string>
+    <string name="categories">Preferences</string>
+    <string name="destinations_list">Destination List/</string>
+    <string name="saved_destinations">Saved Destinations/</string>
+
+    <!--Firebase Keys-->
+    <string name="user_id">user_ID</string>
+    <string name="user_email">email_address</string>
+    <string name="user_selected_category">Pref</string>
+    <string name="category_name">preference_name</string>
+    <string name="first_name">first_name</string>
+    <string name="middle_name">middle_name</string>
+    <string name="last_name">last_name</string>
+    <string name="date_of_birth">date_of_birth</string>
+    <string name="gender">gender</string>
+    <string name="education">education</string>
+    <string name="current_employment">current_employment</string>
+    <string name="past_employment">past_employment</string>
+    <string name="address">address</string>
+    <string name="phone_number">phone_number</string>
+    <string name="username">username</string>
+    <string name="religion">religion</string>
+    <string name="relationship_status">relationship_status</string>
+    <string name="bio">bio</string>
+
+    <!--Placeholders-->
+    <string name="prefs_text_placeholder">Preference 0</string>
+    <string name="category_text_placeholder">Category</string>
+    <string name="open_days_placeholder">Days</string>
+    <string name="open_hours_placeholder">Hours</string>
+    <string name="open_info_placeholder">Info</string>
+    <string name="address_placeholder">Address</string>
+
+    <!--TEMP-->
+    <string-array name="CountryList">
+        <item name="Area1">Port of Spain, Trinidad and Tobago</item>
+        <item name="Area2">Scarborough, Trinidad and Tobago</item>
+        <item name="Area3">Kingston, Jamaica</item>
+        <item name="Area4">London, England</item>
+        <item name="Area">New Orleans, United States of America</item>
+    </string-array>
+
+    <string-array name="genders">
+        <item name="gender1">Male</item>
+        <item name="gender2">Female</item>
+        <item name="gender3">Transgender Female</item>
+        <item name="gender4">Transgender Male</item>
+    </string-array>
+
+    <!--Local Text-->
+    <string name="test_0">Test</string>
+    <string name="open_days">Open Days: </string>
+    <string name="open_hours">Open Hours: </string>
+    <string name="destination_info">Information: </string>
+    <string name="destination_address">Address: </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
