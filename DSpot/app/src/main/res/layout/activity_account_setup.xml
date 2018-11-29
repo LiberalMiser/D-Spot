@@ -26,9 +26,9 @@
         android:layout_marginEnd="8dp"
         android:onClick="nextFragment"
         android:text="Next"
-        android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/AppTheme.MainAppTheme.Button"/>
 
     <Button
         android:id="@+id/previousButton"
@@ -38,8 +38,8 @@
         android:layout_marginStart="8dp"
         android:onClick="nextFragment"
         android:text="Back"
-        android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/AppTheme.MainAppTheme.Button"/>
 
 </android.support.constraint.ConstraintLayout>

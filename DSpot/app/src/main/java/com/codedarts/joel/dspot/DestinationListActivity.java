@@ -45,6 +45,7 @@ public class DestinationListActivity extends AppCompatActivity {
     public static String SELECTED_TWITTER = "SELECTED_TWITTER";
 
     public static String SELECTED_KEY = "SELECTED_KEY";
+    public static String SELECTED_CATEGORY_KEY = "SELECTED_CATEGORY";
 
     private ListView listView;
     private TextView categoryTextView;
@@ -113,6 +114,7 @@ public class DestinationListActivity extends AppCompatActivity {
                 intent.putExtra(SELECTED_RATING, listAdapter.destinationData.get(i).rating);
 
                 intent.putExtra(SELECTED_KEY, listAdapter.keys.get(i));
+                intent.putExtra(SELECTED_CATEGORY_KEY, selectedCategory);
 
                 startActivity(intent);
             }

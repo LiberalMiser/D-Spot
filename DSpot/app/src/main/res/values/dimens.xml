@@ -11,4 +11,9 @@
     <dimen name="sub_title_padding">8dp</dimen>
 
     <dimen name="general_sides_padding">10dp</dimen>
+
+    <dimen name="button_text_size">20sp</dimen>
+    <dimen name="header_1_text_size">30sp</dimen>
+    <dimen name="header_3_text_size">20sp</dimen>
+    <dimen name="header_4_text_size">14sp</dimen>
 </resources>

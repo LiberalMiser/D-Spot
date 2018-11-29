@@ -17,26 +17,20 @@
             android:id="@+id/categoryTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            style="@style/AppTheme.MainAppTheme.Header3Text.GreyCat.SubTitleBarText"
             android:layout_weight="1"
-            android:fontFamily="@font/gray_cat"
-            android:text="@string/category_text_placeholder"
-            android:textColor="@color/cardview_light_background"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:text="@string/category_text_placeholder" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="120sp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="@font/gray_cat"
             android:maxLines="2"
             android:onClick="openCountrySelectionList"
             android:text="Trinidad and Tobago, 2018"
             android:textAlignment="center"
-            android:textColor="@color/cardview_light_background"
-            android:textSize="20sp" />
+            style="@style/AppTheme.MainAppTheme.Header3Text.GreyCat"/>
 
     </LinearLayout>
 

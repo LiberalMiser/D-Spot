@@ -19,6 +19,7 @@
     <string name="categories">Preferences</string>
     <string name="destinations_list">Destination List/</string>
     <string name="saved_destinations">Saved Destinations/</string>
+    <string name="destination_rating">Destination Rating/</string>
 
     <!--Firebase Keys-->
     <string name="user_id">user_ID</string>

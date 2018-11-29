@@ -34,14 +34,11 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:background="@drawable/image_gradient"
-                android:fontFamily="@font/gray_cat"
                 android:gravity="bottom"
                 android:paddingBottom="10dp"
                 android:paddingStart="10dp"
                 android:text="Event Title"
-                android:textColor="@color/cardview_light_background"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                style="@style/AppTheme.MainAppTheme.Header3Text.GreyCat.SubTitleBarText"/>
 
         </RelativeLayout>
 
@@ -56,18 +53,16 @@
             android:layout_marginEnd="8dp"
             android:layout_marginTop="14dp"
             android:layout_row="0"
-            android:fontFamily="@font/gray_cat"
             android:gravity="center"
             android:maxLines="2"
             android:maxWidth="200dp"
             android:text="DD/MM/YY"
             android:textAlignment="center"
-            android:textColor="@color/cardview_light_background"
-            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/AppTheme.MainAppTheme.Header3Text.GreyCat"/>
 
     </android.support.constraint.ConstraintLayout>
 

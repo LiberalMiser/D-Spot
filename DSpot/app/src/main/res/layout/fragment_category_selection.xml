@@ -17,14 +17,10 @@
             android:id="@+id/categoryTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_weight="1"
-            android:fontFamily="@font/gray_cat"
             android:gravity="center_horizontal"
             android:text="@string/categories_title"
-            android:textColor="@color/cardview_light_background"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            style="@style/AppTheme.MainAppTheme.Header3Text.GreyCat.SubTitleBarText" />
 
     </LinearLayout>
 

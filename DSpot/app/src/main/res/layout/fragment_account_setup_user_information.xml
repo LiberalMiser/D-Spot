@@ -37,12 +37,14 @@
 
             <Button
                 android:id="@+id/button"
+                style="@style/AppTheme.MainAppTheme.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:onClick="updateProfilePicture"
-                android:text="Upload Photo"
-                android:textColor="@color/black" />
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Upload Photo" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -53,7 +55,8 @@
                     android:id="@+id/firstNameText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="First Name" />
+                    android:text="First Name"
+                    style="@style/AppTheme.MainAppTheme.Header4Text"/>
 
                 <EditText
                     android:id="@+id/firstNameEditText"
@@ -61,8 +64,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="First Name"
-                    android:textColor="@color/light_grey" />
+                    android:hint="First Name"
+                    style="@style/AppTheme.MainAppTheme.EditTexts"/>
             </LinearLayout>
 
             <LinearLayout
@@ -74,7 +77,8 @@
                     android:id="@+id/lastNameText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Last Name" />
+                    android:text="Last Name"
+                    style="@style/AppTheme.MainAppTheme.Header4Text"/>
 
                 <EditText
                     android:id="@+id/lastNameEditText"
@@ -82,8 +86,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="Last Name"
-                    android:textColor="@color/light_grey" />
+                    android:hint="Last Name"
+                    style="@style/AppTheme.MainAppTheme.EditTexts" />
             </LinearLayout>
 
             <LinearLayout
@@ -95,7 +99,8 @@
                     android:id="@+id/middleNameText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Middle Name" />
+                    android:text="Middle Name"
+                    style="@style/AppTheme.MainAppTheme.Header4Text"/>
 
                 <EditText
                     android:id="@+id/middleNameEditText"
@@ -103,8 +108,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="Middle Name"
-                    android:textColor="@color/light_grey" />
+                    android:hint="Middle Name"
+                    style="@style/AppTheme.MainAppTheme.EditTexts" />
             </LinearLayout>
 
             <LinearLayout
@@ -116,7 +121,8 @@
                     android:id="@+id/dateOfBirthText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Date of Birth" />
+                    android:text="Date of Birth"
+                    style="@style/AppTheme.MainAppTheme.Header4Text"/>
 
                 <EditText
                     android:id="@+id/dateOfBirthEditText"
@@ -124,8 +130,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="date"
-                    android:text="00"
-                    android:textColor="@color/black"/>
+                    android:hint="00"
+                    style="@style/AppTheme.MainAppTheme.EditTexts"/>
             </LinearLayout>
 
             <LinearLayout
@@ -137,7 +143,8 @@
                     android:id="@+id/genderText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Gender" />
+                    android:text="Gender"
+                    style="@style/AppTheme.MainAppTheme.Header4Text"/>
 
                 <Spinner
                     android:id="@+id/genderSpinner"
@@ -155,7 +162,8 @@
                     android:id="@+id/addressText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Address" />
+                    android:text="Address"
+                    style="@style/AppTheme.MainAppTheme.Header4Text"/>
 
                 <EditText
                     android:id="@+id/addressEditText"
@@ -163,8 +171,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="Street, City, Country"
-                    android:textColor="@color/light_grey" />
+                    android:hint="Street, City, Country"
+                    style="@style/AppTheme.MainAppTheme.EditTexts" />
             </LinearLayout>
 
             <LinearLayout
@@ -176,7 +184,8 @@
                     android:id="@+id/educationText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Education" />
+                    android:text="Education"
+                    style="@style/AppTheme.MainAppTheme.Header4Text"/>
 
                 <EditText
                     android:id="@+id/educationEditText"
@@ -184,8 +193,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="Eduction"
-                    android:textColor="@color/light_grey" />
+                    android:hint="Eduction"
+                    style="@style/AppTheme.MainAppTheme.EditTexts" />
             </LinearLayout>
 
             <LinearLayout
@@ -197,7 +206,8 @@
                     android:id="@+id/currentEmploymentText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Current Employment" />
+                    android:text="Current Employment"
+                    style="@style/AppTheme.MainAppTheme.Header4Text"/>
 
                 <EditText
                     android:id="@+id/currentEmploymentEditText"
@@ -205,8 +215,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="Current Employment"
-                    android:textColor="@color/light_grey" />
+                    android:hint="Current Employment"
+                    style="@style/AppTheme.MainAppTheme.EditTexts" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -217,7 +227,8 @@
                     android:id="@+id/pastEmploymentText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Past Employment" />
+                    android:text="Past Employment"
+                    style="@style/AppTheme.MainAppTheme.Header4Text"/>
 
                 <EditText
                     android:id="@+id/pastEmploymentEditText"
@@ -225,8 +236,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="Current Employment"
-                    android:textColor="@color/light_grey" />
+                    android:hint="Current Employment"
+                    style="@style/AppTheme.MainAppTheme.EditTexts" />
             </LinearLayout>
 
             <LinearLayout
@@ -238,7 +249,8 @@
                     android:id="@+id/phoneNumberText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Phone Number" />
+                    android:text="Phone Number"
+                    style="@style/AppTheme.MainAppTheme.Header4Text"/>
 
                 <EditText
                     android:id="@+id/phoneNumberEditText"
@@ -246,7 +258,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="numberSigned"
-                    android:textColor="@color/light_grey" />
+                    android:hint="0-000-000-0000"
+                    style="@style/AppTheme.MainAppTheme.EditTexts" />
             </LinearLayout>
 
             <LinearLayout
@@ -258,7 +271,8 @@
                     android:id="@+id/usernameText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Username" />
+                    android:text="Username"
+                    style="@style/AppTheme.MainAppTheme.Header4Text"/>
 
                 <EditText
                     android:id="@+id/usernameEditText"
@@ -266,8 +280,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="Username"
-                    android:textColor="@color/light_grey" />
+                    android:hint="Username"
+                    style="@style/AppTheme.MainAppTheme.EditTexts" />
             </LinearLayout>
 
             <LinearLayout
@@ -279,7 +293,8 @@
                     android:id="@+id/religionText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Religion" />
+                    android:text="Religion"
+                    style="@style/AppTheme.MainAppTheme.Header4Text"/>
 
                 <EditText
                     android:id="@+id/religionEditText"
@@ -287,8 +302,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="Religion"
-                    android:textColor="@color/light_grey" />
+                    android:hint="Religion"
+                    style="@style/AppTheme.MainAppTheme.EditTexts" />
             </LinearLayout>
 
             <LinearLayout
@@ -300,7 +315,8 @@
                     android:id="@+id/relationshipStatusText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Relationship Status" />
+                    android:text="Relationship Status"
+                    style="@style/AppTheme.MainAppTheme.Header4Text"/>
 
                 <EditText
                     android:id="@+id/relationshipEditText"
@@ -308,8 +324,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="Relationship Status"
-                    android:textColor="@color/light_grey" />
+                    android:hint="Relationship Status"
+                    style="@style/AppTheme.MainAppTheme.EditTexts" />
             </LinearLayout>
 
             <LinearLayout
@@ -321,14 +337,15 @@
                     android:id="@+id/bioText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Bio" />
+                    android:text="Bio"
+                    style="@style/AppTheme.MainAppTheme.Header4Text"/>
 
                 <MultiAutoCompleteTextView
                     android:id="@+id/bioEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Bio"
-                    android:textColor="@color/light_grey" />
+                    android:hint="Bio"
+                    style="@style/AppTheme.MainAppTheme.EditTexts" />
 
             </LinearLayout>
 

@@ -2,7 +2,6 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/red</item>
         <item name="colorPrimaryDark">@color/dark_red</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -16,7 +15,9 @@
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" >
+        <item name="android:popupBackground">@color/black</item>
+    </style>
 
     <!--Rating Bar-->
     <style name="RatingBarStyle" parent="Base.Widget.AppCompat.RatingBar.Small">
@@ -35,8 +36,55 @@
         <item name="android:paddingTop">@dimen/sub_title_padding_ends</item>
     </style>
 
-    <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
-        <item name="android:popupBackground">@android:color/white</item>
+    <style name="AppTheme.MainAppTheme.Header3Text.GreyCat.SubTitleBarText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!--Buttons-->
+    <style name="AppTheme.MainAppTheme.Button">
+        <item name="android:background">@color/light_grey</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gray_cat</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!--TEXT-->
+    <style name="AppTheme.MainAppTheme.Header1Text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/header_1_text_size</item>
+    </style>
+    <style name="AppTheme.MainAppTheme.Header1Text.GreyCat">
+        <item name="android:fontFamily">@font/gray_cat</item>
+    </style>
+
+    <style name="AppTheme.MainAppTheme.Header2Text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/header_1_text_size</item>
+    </style>
+    <style name="AppTheme.MainAppTheme.Header2Text.GreyCat">
+        <item name="android:fontFamily">@font/gray_cat</item>
+    </style>
+
+    <style name="AppTheme.MainAppTheme.Header3Text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/header_3_text_size</item>
+    </style>
+    <style name="AppTheme.MainAppTheme.Header3Text.GreyCat">
+        <item name="android:fontFamily">@font/gray_cat</item>
+    </style>
+
+    <style name="AppTheme.MainAppTheme.Header4Text">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/header_4_text_size</item>
+    </style>
+
+    <!--EDIT TEXT-->
+    <style name="AppTheme.MainAppTheme.EditTexts">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/header_4_text_size</item>
+        <item name="android:textColorHint">@color/light_grey</item>
     </style>
 
     <!--Settings Activity Theme-->

@@ -36,11 +36,14 @@ public class DestinationActivity extends AppCompatActivity {
     private RatingBar ratingBar;
 
     private String parentNode;
-
+    private String ratingNode;
+    private String destinationListNode;
 
     private DatabaseReference databaseReference;
     private FirebaseUser firebaseUser;
     private FirebaseAuth firebaseAuth;
+
+    private int numberOf5StarRatings,numberOf4StarRatings,numberOf3StarRatings,numberOf2StarRatings,numberOf1StarRatings;
 
     private Intent intent;
 
@@ -54,6 +57,8 @@ public class DestinationActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         parentNode = getResources().getString(R.string.saved_destinations);
+        ratingNode = getResources().getString(R.string.destination_rating);
+        destinationListNode = getResources().getString(R.string.destinations_list);
 
         intent = getIntent();
 
@@ -141,6 +146,15 @@ public class DestinationActivity extends AppCompatActivity {
 
     public void openEventsListActivity (View view) {
         startActivity(new Intent(this, EventsListActivity.class));
+    }
+
+    public void rateDestination (View view) {
+        //databaseReference.child(destinationListNode + intent.getStringExtra(DestinationListActivity.SELECTED_CATEGORY_KEY) + intent.getStringExtra(DestinationListActivity.SELECTED_KEY) + ratingNode).setValue()
+    }
+
+    private float calculateWeightMean () {
+        return ((numberOf1StarRatings) + (numberOf2StarRatings * 2) + (numberOf3StarRatings * 3) + (numberOf4StarRatings * 4) + (numberOf5StarRatings * 5)) /
+                (numberOf1StarRatings + numberOf2StarRatings + numberOf3StarRatings + numberOf4StarRatings + numberOf5StarRatings);
     }
 
 }

@@ -48,14 +48,12 @@
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:layout_marginTop="-25dp"
+            style="@style/AppTheme.MainAppTheme.Header3Text.GreyCat"
             android:background="@drawable/image_gradient"
-            android:fontFamily="@font/gray_cat"
             android:gravity="center"
             android:paddingStart="5dp"
             android:text="TextView"
             android:textAlignment="viewStart"
-            android:textColor="@color/white"
-            android:textSize="20sp"
             tools:ignore="RtlCompat" />
     </LinearLayout>
 </LinearLayout>

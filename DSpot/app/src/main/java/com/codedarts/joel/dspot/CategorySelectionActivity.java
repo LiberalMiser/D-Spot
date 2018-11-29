@@ -38,7 +38,6 @@ public class CategorySelectionActivity extends AppCompatActivity {
     public String selectedCategoriesBranch;
     public String selectedCategoryKey;
     public String categoriesBranch;
-    private CheckBox checkbox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,6 +121,7 @@ public class CategorySelectionActivity extends AppCompatActivity {
 
         @Override
         public View getView(final int i, View view, final ViewGroup viewGroup) {
+            CheckBox checkbox;
 
             Log.e("NUMBER_OF_CHECKBOXES", "i is at: " + String.valueOf(i));
             if (view == null) {
@@ -145,7 +145,6 @@ public class CategorySelectionActivity extends AppCompatActivity {
                         compoundButton.setTextColor(getResources().getColor(R.color.colorAccent));
                         databaseReference.child(selectedCategoriesBranch + firebaseUser.getUid() + "/" + list.get(i).preference_id).setValue(compoundButton.getText());
                         checkboxStates.set(i, b);
-                        compoundButton.setTextColor(getResources().getColor(R.color.colorAccent));
                     }
                     else {
                         databaseReference.child(selectedCategoriesBranch + firebaseUser.getUid() + "/" + list.get(i).preference_id).removeValue();
@@ -155,37 +154,15 @@ public class CategorySelectionActivity extends AppCompatActivity {
                 }
             });
 
-            /*if (checkbox.isChecked()) {
+            if (checkbox.isChecked()) {
                 checkbox.setTextColor(getResources().getColor(R.color.colorAccent));
             }
             else {
                 checkbox.setTextColor(getResources().getColor(R.color.peach));
-            }*/
+            }
 
             checkbox.setChecked(checkboxStates.get(i));
             checkbox.setText(list.get(i).preference_name);
-
-            databaseReference.child(selectedCategoriesBranch + firebaseUser.getUid()).addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    for (DataSnapshot childSnapshot: dataSnapshot.getChildren()) {
-                        if (checkbox.getText().equals(childSnapshot.getValue())) {
-                            //checkbox.setChecked(true);
-                            checkbox.setTextColor(getResources().getColor(R.color.colorAccent));
-                        }
-                        else {
-                            //checkbox.setChecked(false);
-                            checkbox.setTextColor(getResources().getColor(R.color.peach));
-                        }
-                    }
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-
-                }
-            });
-
             return view;
         }
     }
