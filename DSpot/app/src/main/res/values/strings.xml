@@ -51,11 +51,8 @@
 
     <!--TEMP-->
     <string-array name="CountryList">
-        <item name="Area1">Port of Spain, Trinidad and Tobago</item>
-        <item name="Area2">Scarborough, Trinidad and Tobago</item>
-        <item name="Area3">Kingston, Jamaica</item>
-        <item name="Area4">London, England</item>
-        <item name="Area">New Orleans, United States of America</item>
+        <item name="Area1">Trinidad and Tobago</item>
+        <item name="Area2">Barbados</item>
     </string-array>
 
     <string-array name="genders">

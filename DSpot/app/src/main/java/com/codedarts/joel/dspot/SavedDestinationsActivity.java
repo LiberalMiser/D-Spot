@@ -92,7 +92,7 @@ public class SavedDestinationsActivity extends AppCompatActivity {
 
                 intent.putExtra(SELECTED_LATITUDE, savedDestinationListAdapter.destinationData.get(i).latitude);
                 intent.putExtra(SELECTED_LONGITUDE, savedDestinationListAdapter.destinationData.get(i).longitude);
-                intent.putExtra(SELECTED_RATING, savedDestinationListAdapter.destinationData.get(i).rating);
+                //intent.putExtra(SELECTED_RATING, savedDestinationListAdapter.destinationData.get(i).rating);
 
                 //intent.putExtra(SELECTED_KEY, savedDestinationListAdapter.keys.get(i));
 

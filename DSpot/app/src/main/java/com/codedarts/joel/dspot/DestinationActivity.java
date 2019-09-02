@@ -135,7 +135,8 @@ public class DestinationActivity extends AppCompatActivity {
                 intent.getStringExtra(DestinationListActivity.SELECTED_EVENT_TITLE),
                 intent.getStringExtra(DestinationListActivity.SELECTED_EVENT_DATE),
                 intent.getStringExtra(DestinationListActivity.SELECTED_EVENT_TIME),
-                intent.getIntExtra(DestinationListActivity.SELECTED_RATING, 5),
+                //intent.getIntExtra(DestinationListActivity.SELECTED_RATING, 5),
+                null,
                 null,
                 intent.getStringExtra(DestinationListActivity.SELECTED_TWITTER),
                 intent.getStringExtra(DestinationListActivity.SELECTED_EVENT_WEBSITE)

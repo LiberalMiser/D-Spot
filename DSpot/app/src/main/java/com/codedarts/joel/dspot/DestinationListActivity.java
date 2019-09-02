@@ -1,7 +1,10 @@
 package com.codedarts.joel.dspot;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -47,6 +50,9 @@ public class DestinationListActivity extends AppCompatActivity {
     public static String SELECTED_KEY = "SELECTED_KEY";
     public static String SELECTED_CATEGORY_KEY = "SELECTED_CATEGORY";
 
+    public static String SELECTED_COUNTRY_KEY = "SELECTED_COUNTRY";
+
+    private String selectedCountry;
     private ListView listView;
     private TextView categoryTextView;
     private TextView locationTextView;
@@ -54,6 +60,7 @@ public class DestinationListActivity extends AppCompatActivity {
     private Intent intent;
     private CustomListAdapter listAdapter;
     private Bundle bundle;
+    private SharedPreferences sharedPreferences;
 
     private String databasePath = "Destination List/";
     private int selectedLocationIndex;
@@ -88,6 +95,12 @@ public class DestinationListActivity extends AppCompatActivity {
 
         categoryTextView.setText(selectedCategory);
 
+        //sharedPreferences = getSharedPreferences(getPackageName(), Context.MODE_PRIVATE);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        selectedCountry = sharedPreferences.getString(SELECTED_COUNTRY_KEY, "");
+        final String[] listItems = getResources().getStringArray(R.array.CountryList);
+        locationTextView.setText(selectedCountry);
+
         //Whereas we can setOnClickListeners inside the BaseAdapter, which we did previously,
         //We need to get the specific index of the selected item, not the recycled index.
         //So when views are recycled, they recycle their indexes as well.
@@ -111,7 +124,7 @@ public class DestinationListActivity extends AppCompatActivity {
 
                 intent.putExtra(SELECTED_LATITUDE, listAdapter.destinationData.get(i).latitude);
                 intent.putExtra(SELECTED_LONGITUDE, listAdapter.destinationData.get(i).longitude);
-                intent.putExtra(SELECTED_RATING, listAdapter.destinationData.get(i).rating);
+                //intent.putExtra(SELECTED_RATING, listAdapter.destinationData.get(i).rating);
 
                 intent.putExtra(SELECTED_KEY, listAdapter.keys.get(i));
                 intent.putExtra(SELECTED_CATEGORY_KEY, selectedCategory);
@@ -122,6 +135,7 @@ public class DestinationListActivity extends AppCompatActivity {
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
+        displaySelectedCountry();
         setItemDetails();
     }
 
@@ -145,7 +159,7 @@ public class DestinationListActivity extends AppCompatActivity {
     private void setItemDetails () {
         listAdapter = new CustomListAdapter();
 
-        databaseReference.child(databasePath + selectedCategory).addValueEventListener(new ValueEventListener() {
+        databaseReference.child(databasePath + selectedCountry + "/" + selectedCategory).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot childSnapshot: dataSnapshot.getChildren()) {
@@ -182,6 +196,7 @@ public class DestinationListActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 locationTextView.setText(listItems[selectedLocationIndex]);
+                saveSelectedCountry(listItems[selectedLocationIndex]);
             }
         });
 
@@ -189,7 +204,26 @@ public class DestinationListActivity extends AppCompatActivity {
         dialog.show();
     }
 
-       public class CustomListAdapter extends BaseAdapter {
+    private void saveSelectedCountry (String value) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(SELECTED_COUNTRY_KEY, value);
+        editor.apply();
+        //startActivity((new Intent(this, getClass())));
+        recreate();
+        Toast.makeText(this, "Switching location to " + PreferenceManager.getDefaultSharedPreferences(this).getString(SELECTED_COUNTRY_KEY, ""), Toast.LENGTH_SHORT).show();
+    }
+
+    private void displaySelectedCountry () {
+        //sharedPreferences = getSharedPreferences(getPackageName(), Context.MODE_PRIVATE);
+        //sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        //selectedCountry = sharedPreferences.getString(SELECTED_CATEGORY_KEY, "Trinidad and Tobago");
+        //sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        //selectedCountry = sharedPreferences.getString(SELECTED_COUNTRY_KEY, "");
+        selectedCountry = PreferenceManager.getDefaultSharedPreferences(this).getString(SELECTED_COUNTRY_KEY, "");
+        locationTextView.setText(selectedCountry);
+    }
+
+    public class CustomListAdapter extends BaseAdapter {
         public ArrayList<String> keys = new ArrayList<>();
         public ArrayList<DestinationData> destinationData = new ArrayList<>();
 

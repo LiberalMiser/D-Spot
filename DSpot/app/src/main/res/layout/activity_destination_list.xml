@@ -28,7 +28,7 @@
             android:layout_gravity="center"
             android:maxLines="2"
             android:onClick="openCountrySelectionList"
-            android:text="Trinidad and Tobago, 2018"
+            android:text="Browsing Country"
             android:textAlignment="center"
             style="@style/AppTheme.MainAppTheme.Header3Text.GreyCat"/>
 
